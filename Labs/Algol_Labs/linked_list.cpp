@@ -10,13 +10,13 @@ public:
 	Node(T startingVal) : value = startingVal, next = NULL{};
 };
 
-template <class T> class linkedList
+template <class T> class LinkedList
 {
 private:
 	Node<T>* head;
 
 public:
-	linkedList() : head = NULL;
+	LinkedList() : head = NULL;
 	
 	void push(T val)
 	{
@@ -25,5 +25,37 @@ public:
 		head = y;
 	}
 
+	void pushBack(T val)
+	{
+		Node<T>* present = head;
+		Node<T>* y = new Node(val);
 
+		if (present == NULL)
+			head = y;
+		else
+			while (present->next != NULL)
+				present = present->next;
+		present->next = y;
+	}
+
+	void printList()
+	{
+		Node<T>* present = head;
+		while (present != NULL)
+		{
+			cout << present->data << " ";
+			present = present->next;
+		}
+		cout << endl;
+	}
+
+	void addInOrder(T val) // Comparisons will be occurring and I will need to come up with answers for other Types
+	{
+		Node<T>* present = head;
+		Node<T> y = new Node(val)
+		while ((present->data <= val) || (present != NULL))
+		{
+
+		}
+	}
 };

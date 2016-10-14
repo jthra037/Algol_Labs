@@ -2,10 +2,13 @@
 //
 
 #include "stdafx.h"
+#include "linked_list.cpp"
+
 
 
 int main()
 {
+
     return 0;
 }
 
