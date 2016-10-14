@@ -8,7 +8,7 @@
 
 int main()
 {
-
+	LinkedList<int> myList = new LinkedList();
     return 0;
 }
 
