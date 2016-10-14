@@ -49,13 +49,24 @@ public:
 		cout << endl;
 	}
 
+	void insert(T val, Node<T>&  target)
+	{
+		Node<T> y = new Node(val);
+		y.next = target.next;
+		target.next = &y;
+	}
+
 	void addInOrder(T val) // Comparisons will be occurring and I will need to come up with answers for other Types
 	{
 		Node<T>* present = head;
-		Node<T> y = new Node(val)
+		Node<T>* previous = NULL;
+
 		while ((present->data <= val) || (present != NULL))
 		{
-
+			previous = present;
+			present = present->next;
 		}
+
+		insert(val, previous);
 	}
 };
