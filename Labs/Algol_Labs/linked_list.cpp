@@ -1,27 +1,29 @@
 #include "stdafx.h"
 
-template <class T> class node
+template <class T> class Node
 {
 private:
 	T value;
-	node* next;
+	Node* next;
 
 public:
-	node(T startingVal) : value = startingVal, next = NULL{};
+	Node(T startingVal) : value = startingVal, next = NULL{};
 };
 
 template <class T> class linkedList
 {
 private:
-	node<T>* head;
+	Node<T>* head;
 
 public:
 	linkedList() : head = NULL;
 	
 	void push(T val)
 	{
-		node* y = new node(val);
+		Node<T>* y = new Node<T>(val);
 		y->next = head;
 		head = y;
 	}
+
+
 };
